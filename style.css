@@ -1,0 +1,109 @@
+header {
+    position: fixed; /* এটি হেডারকে স্ক্রিনের সাথে আটকে রাখবে */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* যেন এটি সব কন্টেন্টের উপরে থাকে */
+    background: rgba(5, 10, 10, 0.8); /* হালকা ডার্ক ব্যাকগ্রাউন্ড */
+    backdrop-filter: blur(10px); /* ঝাপসা গ্লাস ইফেক্ট দিবে */
+    padding: 15px 5%;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+body {
+    background-color: #050a0a; /* Dark background */
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.desktop-nav {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.desktop-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.desktop-nav a {
+    text-decoration: none;
+    color: #888;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.desktop-nav a:hover {
+    color: #fff;
+}
+
+
+.cta-top {
+    background-color: #4ed9ff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.cta-top:hover {
+    background-color: #e710cb;
+}
+
+
+.desktop-nav ul li a{
+    transition: background-color 0.4s; /* smooth background change */
+}
+
+
+.desktop-nav ul li a:hover {
+    background-color: #b847d4;
+    padding: 7px 20px;
+    border-radius: 60px 70px 40px 140px;
+    transition: background-color 0.5s ease-in-out; /* smooth in & out */
+}
+
+
+
+
+
+
+
+
+
