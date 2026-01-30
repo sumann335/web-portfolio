@@ -904,7 +904,10 @@ html {
 /* মাউস নিলে জুম ইফেক্ট - যা আপনি আগে চেয়েছিলেন */
 .review-card:hover {
     transform: scale(1.05);
-    border-color: #00e5ff;
+    border-color:  rgba(255, 0, 0, 0.6)
+    rgba(0, 150, 255, 0.6)
+    rgba(0, 255, 150, 0.6)
+    rgba(255, 200, 0, 0.6);
 }
 
 .quote-icon {
