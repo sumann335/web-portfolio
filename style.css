@@ -175,3 +175,257 @@ header {
     font-size: 1rem;
 }
 
+
+
+
+
+
+
+
+/* সব বাটন এবং ক্লিকেবল এলিমেন্টে জুম ইফেক্ট */
+button, .cta-top, .submit-btn, .desktop-nav ul li a {
+    transition: transform 0.3s ease; /* জুম হওয়াকে স্মুথ করবে */
+}
+
+/* মাউস নিলে জুম হবে */
+button:hover, .cta-top:hover, .submit-btn:hover, .desktop-nav ul li a:hover {
+    transform: scale(1.1); /* ১.১ গুণ বড় হবে */
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Responsive (Mobile View) */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none; /* মোবাইলে মেনু হাইড করা হয়েছে */
+    }
+
+    .main-title {
+        font-size: 4rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .header-right .cta-top {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* সব বাটন এবং ক্লিকেবল এলিমেন্টে জুম ইফেক্ট */
+button, .cta-top, .submit-btn, .desktop-nav ul li a {
+    transition: transform 0.3s ease; /* জুম হওয়াকে স্মুথ করবে */
+}
+
+/* মাউস নিলে জুম হবে */
+button:hover, .cta-top:hover, .submit-btn:hover, .desktop-nav ul li a:hover {
+    transform: scale(1.1); /* ১.১ গুণ বড় হবে */
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Responsive (Mobile View) */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none; /* মোবাইলে মেনু হাইড করা হয়েছে */
+    }
+
+    .main-title {
+        font-size: 4rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .header-right .cta-top {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+/* About Section Styles */
+.about-section {
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.about-title {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.about-title span {
+    color: #00e5ff;
+}
+
+.about-text {
+    color: #aaaaaa;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.about-text strong {
+    color: #fff;
+}
+
+/* Info Cards */
+.info-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.card .icon {
+    font-size: 1.5rem;
+    color: #00e5ff;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/* Image Side */
+.about-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.5s ease-in-out; /* smooth zoom */
+    filter: grayscale(100%); /* ছবির কালার ব্ল্যাক এন্ড হোয়াইট করার জন্য */
+}
+.image-container img:hover {
+    filter: grayscale(0%); /* হোভার করলে রঙিন হবে */
+    transition: filter 0.5s ease;
+    transform: scale(1.2);
+   
+   
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    background: #111;
+    border: 1px solid #222;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.exp-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:rgba(255, 255, 255, 0.91);
+}
+
+.exp-text {
+    font-size: 0.6rem;
+    text-align: center;
+    color: rgb(255, 0, 0);
+    letter-spacing: 1px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .about-section .container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-title {
+        font-size: 2.2rem;
+    }
+
+    .about-image-wrapper {
+        margin-top: 50px;
+        order: -1; /* মোবাইলে ছবি আগে দেখাবে */
+    }
+
+    .experience-badge {
+        width: 100px;
+        height: 100px;
+        bottom: -10px;
+        right: -10px;
+    }
+
+    .exp-number {
+        font-size: 1.5rem;
+    }
+}
