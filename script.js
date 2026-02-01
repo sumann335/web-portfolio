@@ -55,7 +55,7 @@ function sendToWhatsApp() {
 
     // ২. ইমেইল ভ্যালিডেশন (এটিই আপনার মূল চাওয়া)
     if (!emailPattern.test(email)) {
-        alert("ভুল ইমেল! দয়া করে সঠিক ইমেইল দিন।"); // ওয়ার্নিং দেখাবে
+        alert("Incorrect email! Please enter a correct email.।"); // ওয়ার্নিং দেখাবে
         emailInput.style.borderColor = "red"; // বক্স লাল করবে
         emailInput.focus(); // কার্সার ইমেইল বক্সে নিয়ে যাবে
         return; // এটি অত্যন্ত জরুরি, যাতে কোড আর নিচে না নামে
@@ -76,3 +76,9 @@ function sendToWhatsApp() {
     // ৫. নতুন ট্যাবে ওপেন করা
     window.open(whatsappURL, '_blank');
 }
+
+
+
+
+
+

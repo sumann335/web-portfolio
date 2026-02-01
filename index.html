@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sumon - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -433,10 +434,102 @@
     </div>
 </section>
 
+
 <script src="script.js"></script>
 </body>
 </html>
 
 </html>
+
+
+
+<style>
+    .contact-wrapper {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* অপশনগুলো মেইন বাটনের ওপরে থাকবে */
+    #optList {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 15px; /* এটি মেইন বাটন থেকে উপরে জায়গা রাখবে */
+    }
+
+    .c-icon, .toggle-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 26px;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    .c-icon:hover, .toggle-btn:hover {
+    transform: scale(1.1); /* মাউস নিলে আইকন ১০% বড় হবে */
+    transition: 0.2s;
+}
+
+    /* আপনার দেওয়া ইমেজের কালার কোড */
+    .toggle-btn { background-color: #8cd494; } 
+    .c-wa { background-color: #45ea62; }
+    .c-call { background-color: #2196F3; }
+    .c-msg { background-color: #0084FF; }
+
+    /* মোবাইল ভিউতে ছোট করার নিয়ম */
+    @media (max-width: 600px) {
+        .c-icon, .toggle-btn {
+            width: 50px;
+            height: 50px;
+            font-size: 22px;
+        }
+        .contact-wrapper { bottom: 20px; right: 20px; }
+    }
+</style>
+
+<div class="contact-wrapper">
+    <div id="optList">
+        <a href="https://wa.me/8801887041612" target="_blank" class="c-icon c-wa"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+8801887041612" class="c-icon c-call"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://www.facebook.com/sumon6122" target="_blank" class="c-icon c-msg"><i class="fab fa-facebook-messenger"></i></a>
+    </div>
+
+    <div class="toggle-btn" onclick="toggleWidgetNow()">
+        <i class="fas fa-comment-dots" id="chatImg"></i>
+        <i class="fas fa-times" id="closeImg" style="display: none;"></i>
+    </div>
+</div>
+
+<script>
+    function toggleWidgetNow() {
+        var opt = document.getElementById('optList');
+        var chat = document.getElementById('chatImg');
+        var close = document.getElementById('closeImg');
+
+        // যদি লুকানো থাকে তবে অন করো
+        if (opt.style.display === "none" || opt.style.display === "") {
+            opt.style.display = "flex";
+            chat.style.display = "none";
+            close.style.display = "block";
+        } else {
+            // অন্যথায় অফ করো
+            opt.style.display = "none";
+            chat.style.display = "block";
+            close.style.display = "none";
+        }
+    }
+</script>
 </body>
 </html>
